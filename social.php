@@ -494,7 +494,7 @@ final class Social {
 				wp_schedule_event(time() + 900, 'every15min', 'socialcron15init');
 			}
 			wp_remote_get(
-				admin_url('options_general.php?'.http_build_query(array(
+				admin_url('options-general.php?'.http_build_query(array(
 					'social_controller' => 'cron',
 					'social_action' => 'check_crons',
 					'social_api_key' => Social::option('system_cron_api_key')
